@@ -9,7 +9,7 @@ node {
 
   stage("Announce") {
     def utils = load 'Jenkinsfiles/util.groovy'
-    utils.slack_notify([
+    utils.notify_slack([
       status: "Pushing to test",
       message: "Why should i test this out ${BUILD_NUMBER}"
     ])
