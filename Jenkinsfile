@@ -4,6 +4,10 @@
 node {
   def utils = load 'Jenkinsfiles/util.groovy'
 
+  stage("Checkout") {
+    checkout scm
+  }
+
   stage("Announce") {
     utils.slack_notify([
       status: "Pushing to test",
