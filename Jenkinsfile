@@ -1,8 +1,9 @@
 #!groovy
 
-def utils = load 'Jenkinsfiles/util.groovy'
 
 node {
+  def utils = load 'Jenkinsfiles/util.groovy'
+
   stage("Announce") {
     utils.slack_notify([
       status: "Pushing to test",
