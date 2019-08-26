@@ -7,8 +7,8 @@ node {
     checkout scm
   }
 
-  def utils = load 'Jenkinsfiles/util.groovy'
   stage("Announce") {
+    def utils = load 'Jenkinsfiles/util.groovy'
     utils.slack_notify([
       status: "Pushing to test",
       message: "Why should i test this out ${BUILD_NUMBER}"
