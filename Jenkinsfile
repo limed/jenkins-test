@@ -10,4 +10,8 @@ node {
       message: "Why should i test this out ${BUILD_NUMBER}"
     ])
   }
+
+  stage("Cleanup") {
+    cleanWs()
+  }
 }
