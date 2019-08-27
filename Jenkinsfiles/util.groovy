@@ -11,3 +11,5 @@ def notify_slack(Map args) {
         '''
     }
 }
+
+return this;
