@@ -89,7 +89,7 @@ if [ -z "${HOOK}" ]; then
     exit 1
 fi
 
-read -d '' payload <<EOF
+read -r -d '' payload <<EOF
 {
     "attachments": [
         {
@@ -113,7 +113,7 @@ read -d '' payload <<EOF
 EOF
 
 status_code=$(curl \
-    --write-out %{http_code} \
+    --write-out "%{http_code}" \
     --silent \
     -o /dev/null \
     -X POST \
